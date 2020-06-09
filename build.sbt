@@ -22,6 +22,24 @@ libraryDependencies ++= Seq(compilerPlugin(
   "com.github.julien-truffaut" %% "monocle-core" % "2.0.1",
   "com.github.julien-truffaut" %% "monocle-macro" % "2.0.1"
 )
+
+val Http4sVersion = "0.21.3"
+val CirceVersion = "0.13.0"
+val Specs2Version = "4.9.3"
+val LogbackVersion = "1.2.3"
+
+
+libraryDependencies ++= Seq(
+  "org.http4s"      %% "http4s-blaze-server" % Http4sVersion,
+  "org.http4s"      %% "http4s-blaze-client" % Http4sVersion,
+  "org.http4s"      %% "http4s-circe"        % Http4sVersion,
+  "org.http4s"      %% "http4s-dsl"          % Http4sVersion,
+  "io.circe"        %% "circe-generic"       % CirceVersion,
+  "org.specs2"      %% "specs2-core"         % Specs2Version % "test",
+  "ch.qos.logback"  %  "logback-classic"     % LogbackVersion
+)
+
+
 scalacOptions += "-Ymacro-annotations"
 
 
