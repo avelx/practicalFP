@@ -39,7 +39,9 @@ libraryDependencies ++= Seq(
   "ch.qos.logback"  %  "logback-classic"     % LogbackVersion
 )
 
+libraryDependencies += "org.scalatest" % "scalatest_2.13" % "3.1.1" % Test
+libraryDependencies += "org.scalamock" %% "scalamock" % "4.4.0" % Test
+
+libraryDependencies += "org.scalacheck" %% "scalacheck" % "1.14.1" % "test"
 
 scalacOptions += "-Ymacro-annotations"
-
-
